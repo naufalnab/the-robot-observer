@@ -1,0 +1,133 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-red: #FF2727;
+    --primary-orange: #F5660A;
+    --primary-yellow: #FCC000;
+    --light-text: #FFF8F8;
+    --dark-bg: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--light-text);
+    text-shadow: 0 0 8px rgba(255, 39, 39, 0.7);
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid var(--primary-red);
+}
+
+.opensea-link {
+    color: var(--light-text);
+    text-decoration: none;
+    border: 1px solid var(--primary-orange);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.opensea-link:hover {
+    background-color: var(--primary-orange);
+    color: var(--dark-bg);
+}
+
+/* --- Main Content --- */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- NFT Card Styling --- */
+.nft-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.nft-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nft-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--primary-red);
+    border-color: var(--primary-red);
+}
+
+.nft-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-orange);
+    text-shadow: none;
+}
+
+.card-content .description {
+    font-weight: 300;
+    font-style: italic;
+    color: #ccc;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #888;
+}
